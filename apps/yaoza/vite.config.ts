@@ -1,4 +1,3 @@
-/// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
@@ -16,21 +15,9 @@ const resolveAccolade = (aliasName: string, modulename: string) => {
 };
 export default defineConfig({
   root: __dirname,
-  //TODO: Edit Dir when changing app name
-  cacheDir: '../../node_modules/.vite/apps/yaoza',
-
-  server: {
-    port: 4200,
-    host: 'localhost',
-  },
-
-  preview: {
-    port: 4300,
-    host: 'localhost',
-  },
-
   plugins: [react(), nxViteTsPaths()],
-  //TODO: resolve this
+
+  //TODO: Check if this is needed
   resolve: {
     alias: [
       resolveAccolade('@bcp-nextgen-dx-component-factory/design-system', 'design-system/src'),
@@ -55,13 +42,13 @@ export default defineConfig({
   // },
   
 
-  build: {
-    outDir: '../../dist/apps/yaoza',
-    reportCompressedSize: true,
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
-  },
+  // build: {
+  //   outDir: '../../dist/apps/yaoza',
+  //   reportCompressedSize: true,
+  //   commonjsOptions: {
+  //     transformMixedEsModules: true,
+  //   },
+  // },
 
   // test: {
   //   globals: true,

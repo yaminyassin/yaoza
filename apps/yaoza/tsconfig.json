@@ -12,8 +12,10 @@
   "references": [
     {
       "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.storybook.json"
     }
-    //TODO: Add tsconfig.storybook.json when adding storybook
   ],
   "extends": "../../tsconfig.base.json"
 }
