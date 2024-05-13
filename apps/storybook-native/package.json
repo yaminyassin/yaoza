@@ -19,7 +19,15 @@
     "vite": "*",
     "@vitejs/plugin-react": "*",
     "@nx/vite": "*",
-    "esbuild": "*"
+    "esbuild": "*",
+    "@storybook/react-native": "*",
+    "@storybook/addon-ondevice-backgrounds": "*",
+    "@storybook/react": "*",
+    "@storybook/addon-ondevice-notes": "*",
+    "@storybook/addon-ondevice-controls": "*",
+    "@storybook/addon-ondevice-actions": "*",
+    "@storybook/addon-actions": "*",
+    "@storybook/react-vite": "*"
   },
   "devDependencies": {}
 }
