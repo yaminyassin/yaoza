@@ -1,5 +1,12 @@
 const { withNxMetro } = require('@nx/react-native');
-const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
+const { getDefaultConfig, mergeConfig, } = require('@react-native/metro-config');
+const exclusionList = require('metro-config/src/defaults/exclusionList');
+const {
+  getMetroAndroidAssetsResolutionFix,
+} = require('react-native-monorepo-tools');
+
+const androidAssetsResolutionFix = getMetroAndroidAssetsResolutionFix();
+
 const { generate } = require("@storybook/react-native/scripts/generate");
 const path = require("path");
 
@@ -18,12 +25,27 @@ const { assetExts, sourceExts } = defaultConfig.resolver;
  */
 const customConfig = {
   transformer: {
-    unstable_allowRequireContext: true,
     babelTransformerPath: require.resolve('react-native-svg-transformer'),
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: true,
+      },
+    }),
+    publicPath: androidAssetsResolutionFix.publicPath,
+    unstable_allowRequireContext: true,
+  },
+  server: {
+    enhanceMiddleware: (middleware) => {
+      return androidAssetsResolutionFix.applyMiddleware(middleware);
+    },
   },
   resolver: {
     assetExts: assetExts.filter((ext) => ext !== 'svg'),
     sourceExts: [...sourceExts, 'cjs', 'mjs', 'svg'],
+    blockList: exclusionList([/^(?!.*node_modules).*\/dist\/.*/]),
+    unstable_enableSymlinks: true,
+    unstable_enablePackageExports: false,
   },
 };
 

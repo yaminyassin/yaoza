@@ -11,13 +11,16 @@ import {
   Linking,
 } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
+import { ThemeProvider } from '@bcp-nextgen-dx-component-factory/core';
+import { Accolade } from '@bcp-nextgen-dx-component-factory/theme-accolade';
+
 
 export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
   const scrollViewRef = useRef<null | ScrollView>(null);
 
   return (
-    <>
+    <ThemeProvider theme={Accolade}>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView
         style={{
@@ -618,7 +621,7 @@ export const App = () => {
           </View>
         </ScrollView>
       </SafeAreaView>
-    </>
+    </ThemeProvider>
   );
 };
 const styles = StyleSheet.create({

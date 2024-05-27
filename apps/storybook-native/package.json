@@ -15,6 +15,8 @@
     "react-native-svg": "*",
     "metro-config": "*",
     "react-native-svg-transformer": "*",
+    "react-native-reanimated": "*",
+    "react-native-gesture-handler": "*",
     "react-dom": "*",
     "vite": "*",
     "@vitejs/plugin-react": "*",
@@ -27,7 +29,9 @@
     "@storybook/addon-ondevice-controls": "*",
     "@storybook/addon-ondevice-actions": "*",
     "@storybook/addon-actions": "*",
-    "@storybook/react-vite": "*"
+    "@storybook/react-vite": "*",
+    "@bcp-nextgen-dx-component-factory/core": "*",
+    "@bcp-nextgen-dx-component-factory/theme-accolade": "*"
   },
   "devDependencies": {}
 }

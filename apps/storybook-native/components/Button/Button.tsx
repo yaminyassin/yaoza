@@ -1,5 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Button } from '@bcp-nextgen-dx-component-factory/design-system';
 
 export type ButtonProps = {
   onPress: () => void;
@@ -30,13 +31,10 @@ const styles = StyleSheet.create({
 
 export const MyButton = ({text, onPress, color, textColor}: ButtonProps) => (
   <View style={styles.buttonContainer}>
-    <TouchableOpacity
-      style={[styles.button, !!color && {backgroundColor: color}]}
+    <Button
+      fullWidth
+      size='large'
       onPress={onPress}
-      activeOpacity={0.8}>
-      <Text style={[styles.buttonText, !!textColor && {color: textColor}]}>
-        {text}
-      </Text>
-    </TouchableOpacity>
+      >OLAAA</Button>
   </View>
 );
