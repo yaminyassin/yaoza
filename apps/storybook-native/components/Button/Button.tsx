@@ -35,6 +35,6 @@ export const MyButton = ({text, onPress, color, textColor}: ButtonProps) => (
       fullWidth
       size='large'
       onPress={onPress}
-      >OLAAA</Button>
+    >{text}</Button>
   </View>
 );

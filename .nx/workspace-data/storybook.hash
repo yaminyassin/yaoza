@@ -1,0 +1,154 @@
+{
+  "13064336052403358871": {
+    "build-storybook": {
+      "command": "storybook build",
+      "options": {
+        "cwd": "apps/storybook-native"
+      },
+      "cache": true,
+      "outputs": [
+        "{workspaceRoot}/{projectRoot}/storybook-static",
+        "{options.output-dir}",
+        "{options.outputDir}",
+        "{options.o}"
+      ],
+      "inputs": [
+        "production",
+        "^production",
+        {
+          "externalDependencies": [
+            "storybook",
+            "@storybook/test-runner"
+          ]
+        }
+      ]
+    },
+    "storybook": {
+      "command": "storybook dev",
+      "options": {
+        "cwd": "apps/storybook-native"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "build-storybook",
+        "staticFilePath": "apps/storybook-native/storybook-static"
+      }
+    }
+  },
+  "10380136051150004136": {
+    "build-storybook": {
+      "command": "storybook build",
+      "options": {
+        "cwd": "apps/yaoza"
+      },
+      "cache": true,
+      "outputs": [
+        "{workspaceRoot}/{projectRoot}/storybook-static",
+        "{options.output-dir}",
+        "{options.outputDir}",
+        "{options.o}"
+      ],
+      "inputs": [
+        "production",
+        "^production",
+        {
+          "externalDependencies": [
+            "storybook",
+            "@storybook/test-runner"
+          ]
+        }
+      ]
+    },
+    "storybook": {
+      "command": "storybook dev",
+      "options": {
+        "cwd": "apps/yaoza"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "build-storybook",
+        "staticFilePath": "apps/yaoza/storybook-static"
+      }
+    }
+  },
+  "14356945052218520241": {
+    "build-storybook": {
+      "command": "storybook build",
+      "options": {
+        "cwd": "apps/storybook-native"
+      },
+      "cache": true,
+      "outputs": [
+        "{workspaceRoot}/{projectRoot}/storybook-static",
+        "{options.output-dir}",
+        "{options.outputDir}",
+        "{options.o}"
+      ],
+      "inputs": [
+        "production",
+        "^production",
+        {
+          "externalDependencies": [
+            "storybook",
+            "@storybook/test-runner"
+          ]
+        }
+      ]
+    },
+    "storybook": {
+      "command": "storybook dev",
+      "options": {
+        "cwd": "apps/storybook-native"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "build-storybook",
+        "staticFilePath": "apps/storybook-native/storybook-static"
+      }
+    }
+  },
+  "12163642730431589984": {
+    "build-storybook": {
+      "command": "storybook build",
+      "options": {
+        "cwd": "apps/yaoza"
+      },
+      "cache": true,
+      "outputs": [
+        "{workspaceRoot}/{projectRoot}/storybook-static",
+        "{options.output-dir}",
+        "{options.outputDir}",
+        "{options.o}"
+      ],
+      "inputs": [
+        "production",
+        "^production",
+        {
+          "externalDependencies": [
+            "storybook",
+            "@storybook/test-runner"
+          ]
+        }
+      ]
+    },
+    "storybook": {
+      "command": "storybook dev",
+      "options": {
+        "cwd": "apps/yaoza"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "build-storybook",
+        "staticFilePath": "apps/yaoza/storybook-static"
+      }
+    }
+  }
+}
