@@ -1,5 +1,4 @@
 import { AppRegistry } from 'react-native';
-//import App from './app/App';
-import App from '../.ondevice';
+import StorybookApp from '../.ondevice';
 
-AppRegistry.registerComponent('StorybookNative', () => App);
+AppRegistry.registerComponent('StorybookNative', () => StorybookApp);

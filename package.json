@@ -2,7 +2,11 @@
   "name": "@yaoza/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "pod-install": "nx pod-install storybook-native",
+    "start-native": "nx start storybook-native",
+    "postinstall": "patch-package"
+  },
   "private": true,
   "dependencies": {
     "@bcp-nextgen-dx-component-factory/design-system": "4.9.0",
@@ -13,13 +17,14 @@
     "@react-native-community/datetimepicker": "^7.6.2",
     "@react-native-community/slider": "^4.5.0",
     "core-js": "^3.37.1",
+    "patch-package": "^8.0.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-is": "18.3.1",
     "react-native": "0.73.6",
+    "react-native-gesture-handler": "^2.14.0",
     "react-native-reanimated": "3.6.0",
-    "react-native-safe-area-context": "^4.8.2",
-    "react-native-gesture-handler": "2.14.0",
+    "react-native-safe-area-context": "^4.7.4",
     "react-native-webview": "13.6.3",
     "styled-components": "5.3.6",
     "tslib": "^2.3.0"

@@ -1,8 +1,12 @@
-import { ThemeProvider } from '@bcp-nextgen-dx-component-factory/core';
-import { view } from "./storybook.requires";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import {
+  ThemeProvider,
+  ToastProvider,
+} from '@bcp-nextgen-dx-component-factory/design-system';
+import { view } from './storybook.requires';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Accolade } from '@bcp-nextgen-dx-component-factory/theme-accolade';
-
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 const StorybookUIRoot = view.getStorybookUI({
   storage: {
     getItem: AsyncStorage.getItem,
@@ -12,9 +16,14 @@ const StorybookUIRoot = view.getStorybookUI({
 
 const RootWithDesignSystem = () => {
   return (
-    <ThemeProvider theme={Accolade}>
-      <StorybookUIRoot />
-    </ThemeProvider>);
-}
+    <SafeAreaProvider>
+      <ThemeProvider theme={Accolade}>
+        <ToastProvider>
+          <StorybookUIRoot />
+        </ToastProvider>
+      </ThemeProvider>
+    </SafeAreaProvider>
+  );
+};
 
 export default RootWithDesignSystem;

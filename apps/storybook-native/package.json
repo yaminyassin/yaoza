@@ -31,7 +31,9 @@
     "@storybook/addon-actions": "*",
     "@storybook/react-vite": "*",
     "@bcp-nextgen-dx-component-factory/core": "*",
-    "@bcp-nextgen-dx-component-factory/theme-accolade": "*"
+    "@bcp-nextgen-dx-component-factory/theme-accolade": "*",
+    "@bcp-nextgen-dx-component-factory/design-system": "*",
+    "react-native-monorepo-tools": "*"
   },
   "devDependencies": {}
 }
